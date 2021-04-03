@@ -160,6 +160,7 @@ nav li a:hover {
 	width: 60px;
 	border-radius: 50%;
 	transition: all 1s ease-in;
+	border: 1px solid var(--flag-white);
 }
 .middle {
 	display: flex;
@@ -225,6 +226,22 @@ section#home h1 {
 	font-size: 3em;
 	color: var(--flag-white);
 	transform: translateY(-30vh);
+}
+
+section#home .icons-container {
+	position: absolute;
+	bottom: 60px;
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+section#home .icons-container .icon {
+	width: 50px;
+	margin: 20px 20px;
 }
 
 section#menu {
@@ -371,11 +388,36 @@ section#contact .container .address p {
 	color: var(--flag-white);
 }
 
+section#contact .container .xenos {
+	position: absolute;
+	bottom: 20px;
+}
+
+section#contact .container .xenos h6 {
+	font-size: 1rem;
+	color: #fff;
+}
+
+section#contact .container .xenos h6 a {
+	font-size: 1rem;
+	color: var(--flag-white);
+	text-decoration: none;
+}
+
+section#contact .container .xenos h6 a:hover {
+	font-size: 1.1rem;
+	color: var(--flag-green);
+}
+
 /* Media Queries */
 @media screen and (min-width: 768px) and (orientation: portrait) {
 	section#home h1 {
 		font-size: 3em;
 		transform: translateY(-35vh);
+	}
+
+	section#home .icons-container {
+		bottom: 90px;
 	}
 
 	section#menu .container .menu-left .starters .image-container,
@@ -405,6 +447,10 @@ section#contact .container .address p {
 	section#home h1 {
 		font-size: 4em;
 		transform: translateY(-35vh);
+	}
+
+	section#home .icons-container {
+		bottom: 130px;
 	}
 
 	section#menu .container .menu-left .starters .image-container,
@@ -460,6 +506,10 @@ section#contact .container .address p {
 		transform: translateY(0);
 	}
 
+	section#home .icons-container {
+		display: none;
+	}
+
 	section#menu .container {
 		display: none;
 	}
@@ -475,6 +525,10 @@ section#contact .container .address p {
 	section#contact .container .logos-container .logo {
 		width: 100px;
 		margin: 0 40px;
+	}
+	section#contact .container .xenos {
+		position: absolute;
+		bottom: 5px;
 	}
 }
 
