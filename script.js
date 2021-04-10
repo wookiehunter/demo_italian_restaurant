@@ -7,7 +7,7 @@ const nav2 = document.getElementById('nav-2');
 const nav3 = document.getElementById('nav-3');
 const nav4 = document.getElementById('nav-4');
 const nav5 = document.getElementById('nav-5');
-const navItems = [nav1, nav2, nav3, nav4, nav5];
+const navItems = [nav1, nav2, nav3];
 
 // Functions
 // Navigation animation
@@ -31,13 +31,16 @@ function toggleNav() {
 	}
 }
 
-// Event Listeners
-navToggle.addEventListener('click', () => {
+function changeToggle() {
 	rings.forEach((ring) => {
-		setTimeout(ring.classList.toggle('active'), 1000);
-	});
-});
+		ring.classList.toggle('active');
+	});	
+}
+
+// Event Listeners
+navToggle.addEventListener('click', changeToggle);
 navToggle.addEventListener('click', toggleNav);
 navItems.forEach((nav) => {
 	nav.addEventListener('click', toggleNav);
+	nav.addEventListener('click', changeToggle);
 });
